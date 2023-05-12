@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,14 +14,18 @@ export default function Home() {
           className="object-cover object-center bg-center w-full h-screen"
         />
         <div className="flex flex-col px-20 sm:px-2 gap-5 justify-center items-start absolute top-28 text-lg text-white font-bold bg-slate-500/10 w-full h-full">
-          <span className="text-6xl md:-text-2xl sm:text-4xl uppercase">Barbearia Shop</span>
+          <span className="text-6xl md:-text-2xl sm:text-4xl uppercase">
+            Barbearia Shop
+          </span>
           <p className="text-2xl sm:text-xl font-bold uppercase">
             fique por dentro das novidades!
           </p>
-          <button className="bg-default hover:bg-golden w-80 md:w-full sm:w-full tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
-            {" "}
-            Saiba mais
-          </button>
+          <Link href="/news/novidades">
+            <button className="bg-default hover:bg-golden w-80 md:w-full sm:w-full tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
+              {" "}
+              Saiba mais
+            </button>
+          </Link>
         </div>
       </div>
       <section className="flex flex-col items-center justify-center gap-16 py-20">
@@ -48,7 +53,7 @@ export default function Home() {
               Corte com tesoura, máquina e acabamento com navalha.
             </p>
             <span className="text-default text-2xl">R$ 25</span>
-          </div> 
+          </div>
           <div className="w-80 md:w-full sm:w-full flex flex-col gap-5 p-3">
             <Image
               src="/images/service-icon-2.png"
@@ -82,9 +87,11 @@ export default function Home() {
             <span className="text-default text-2xl">R$ 45</span>
           </div>
         </div>
-        <button className="bg-default hover:bg-golden tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-10 py-4 rounded-full">
-          Ver todos os serviços
-        </button>
+        <Link href="/service-list">
+          <button className="bg-default hover:bg-golden tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-10 py-4 rounded-full">
+            Ver todos os serviços
+          </button>
+        </Link>
       </section>
       <section className="flex flex-row items-center justify-center sm:flex-wrap sm:px-3 w-full gap-16 py-20 bg-yellow-900/10 px-20">
         <Image
@@ -104,9 +111,11 @@ export default function Home() {
           <p className="tracking-wider text-sm">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
-          <button className="bg-default hover:bg-golden w-80 md:w-full sm:w-full tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
-            Visite nosso blog
-          </button>
+          <Link href="/news/blog">
+            <button className="bg-default hover:bg-golden w-80 md:w-full sm:w-full tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
+              Visite nosso blog
+            </button>
+          </Link>
         </div>
       </section>
       <section className="flex flex-col items-center justify-center gap-16 py-20">
