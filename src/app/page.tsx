@@ -118,7 +118,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <section className="flex flex-col items-center justify-center gap-16 py-20">
+      <section className="flex flex-col items-center justify-center gap-16 py-20 sm:py-10">
         <header className="flex flex-col justify-center items-center">
           <h1 className="text-4xl tracking-wide font-light uppercase">
             Testemunhos
@@ -156,22 +156,22 @@ export default function Home() {
         </div>
       </section>
       <div className="w-full sm:h-full">
-        <div className="flex flex-col justify-center sm:h-full items-center">
+        <div className="flex flex-col justify-center sm:h-full items-center sm:gap-5 sm:py-5">
           <Image
             src={"/images/cta-section-img.jpg"}
             alt="Picture of the author"
             width={1920}
             height={1080}
-            className="w-full h-full object-cover object-center bg-center filter brightness-50"
+            className="w-full h-full sm:h-48 object-cover object-center bg-center filter brightness-50"
           />
-          <div className="absolute left-0 w-full h-96 sm:h-full justify-center items-start px-20 sm:px-3 flex flex-col gap-5">
-            <h1 className="text-4xl sm:text-xl tracking-wide font-light uppercase text-white">
+          <div className="absolute sm:relative left-0 w-full h-96 sm:h-full justify-center items-start px-20 sm:px-3 flex flex-col gap-5 sm:justify-center sm:items-center">
+            <h1 className="text-4xl sm:text-xl tracking-wide font-light uppercase text-white sm:text-black">
               Agende seu horário
             </h1>
-            <p className="tracking-wider uppercase text-white text-lg">
+            <p className="tracking-wider uppercase text-white text-lg sm:text-black">
               A melhor experiência em barbearia.
             </p>
-            <button className="bg-default hover:bg-golden w-80 sm:w-full tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
+            <button className="bg-default hover:bg-golden w-80 sm:w-48 tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
               Agendar
             </button>
           </div>
@@ -183,7 +183,7 @@ export default function Home() {
             ÚLTIMAS NOTÍCIAS E ARTIGO
           </h1>
         </header>
-        <div className="bg-yellow-900/10 gap-10 flex flex-row sm:flex-wrap py-10 px-20 sm:px-5 rounded-xl">
+        <div className="bg-yellow-900/10 gap-10 flex flex-row sm:flex-wrap py-10 px-20 sm:justify-center sm:px-5 rounded-xl">
           <Image
             src="/images/post-img.jpg"
             alt="Picture of the author"
