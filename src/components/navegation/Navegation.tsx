@@ -28,7 +28,10 @@ export default function Navegation() {
     setMenu(!menu);
   };
   return (
-    <nav className="flex justify-evenly  items-center py-4 border-b h-28">
+    <nav
+      onMouseLeave={handleHoverMenu}
+      className="flex justify-evenly  items-center py-4 border-b h-28"
+    >
       <span className=" w-full font-bold text-2xl">Barbershop logo</span>
       <div className=" w-full flex flex-row tracking-widest font-extralight text-lg uppercase sm:hidden">
         <Link
@@ -152,7 +155,10 @@ export default function Navegation() {
               <div className="relative z-50">
                 <span
                   onClick={handleHover}
-                  onMouseLeave={() => setServices(false)}
+                  onMouseLeave={() => {
+                    setServices(false);
+                    handleHoverMenu();
+                  }}
                   className="hover:bg-default px-10 sm:px-2 py-5 hover:text-white transition-all delay-100 ease-in-out relative flex flex-row items-center"
                 >
                   Services
@@ -169,7 +175,10 @@ export default function Navegation() {
 
                 {services && (
                   <div
-                    onMouseLeave={() => setServices(false)}
+                    onMouseLeave={() => {
+                      setServices(false);
+                      handleHoverMenu();
+                    }}
                     className="absolute translate-x-3 bg-white z-50 text-gray-700 py-0 mt-1 shadow-lg"
                   >
                     <Link href="/service-list/cabelo">
@@ -201,7 +210,10 @@ export default function Navegation() {
               <div className="relative z-40">
                 <span
                   onClick={handleHoverNews}
-                  onMouseLeave={() => setNews(false)}
+                  onMouseLeave={() => {
+                    setNews(false);
+                    handleHoverMenu();
+                  }}
                   className="hover:bg-default px-10 sm:px-2 py-5 hover:text-white transition-all delay-100 ease-in-out relative flex flex-row items-center"
                 >
                   Noticias
@@ -218,7 +230,10 @@ export default function Navegation() {
 
                 {news && (
                   <div
-                    onMouseLeave={() => setNews(false)}
+                    onMouseLeave={() => {
+                      setNews(false);
+                      handleHoverMenu();
+                    }}
                     className="absolute translate-x-3 bg-white text-gray-700 py-0 mt-1 shadow-lg"
                   >
                     <Link href="/news/blog">
