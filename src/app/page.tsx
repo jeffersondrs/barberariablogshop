@@ -13,11 +13,11 @@ export default function Home() {
           className="object-cover object-center bg-center w-full h-screen"
         />
         <div className="flex flex-col px-20 sm:px-2 gap-5 justify-center items-start absolute top-28 text-lg text-white font-bold bg-slate-500/10 w-full h-full">
-          <span className="text-6xl uppercase">Barbearia Shop</span>
-          <p className="text-2xl  font-bold uppercase">
+          <span className="text-6xl md:-text-2xl sm:text-4xl uppercase">Barbearia Shop</span>
+          <p className="text-2xl sm:text-xl font-bold uppercase">
             fique por dentro das novidades!
           </p>
-          <button className="bg-default hover:bg-golden w-80 tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
+          <button className="bg-default hover:bg-golden w-80 md:w-full sm:w-full tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
             {" "}
             Saiba mais
           </button>
@@ -25,15 +25,15 @@ export default function Home() {
       </div>
       <section className="flex flex-col items-center justify-center gap-16 py-20">
         <div className="flex flex-col justify-center items-center gap-3">
-          <h1 className="text-4xl tracking-wide font-light">
+          <h1 className="text-4xl tracking-wide text-center font-light">
             SERVIÇO DE SALÃO E BARBEARIA
           </h1>
-          <p className="tracking-wider text-base">
+          <p className="tracking-wider text-basecolor">
             NÓS AJUDAMOS VOCÊ A FICAR BEM
           </p>
         </div>
         <div className="grid grid-cols-3 sm:grid-cols-1 gap-10 w-full justify-center items-center">
-          <div className="w-80 flex flex-col gap-5">
+          <div className="w-80 md:w-full sm:w-full flex flex-col gap-5 p-3">
             <Image
               src="/images/service-icon-1.png"
               alt="Picture of the author"
@@ -45,11 +45,11 @@ export default function Home() {
               Corte Tradicional
             </h1>
             <p className="tracking-wide text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              Corte com tesoura, máquina e acabamento com navalha.
             </p>
             <span className="text-default text-2xl">R$ 25</span>
-          </div>
-          <div className="w-80 flex flex-col gap-5">
+          </div> 
+          <div className="w-80 md:w-full sm:w-full flex flex-col gap-5 p-3">
             <Image
               src="/images/service-icon-2.png"
               alt="Picture of the author"
@@ -61,11 +61,11 @@ export default function Home() {
               Cabelo e bigode
             </h1>
             <p className="tracking-wide text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              Faça seu bigode e corte seu cabelo em um unico pacote.
             </p>
             <span className="text-default text-2xl">R$ 45</span>
           </div>
-          <div className="w-80 flex flex-col gap-5">
+          <div className="w-80 md:w-full sm:w-full flex flex-col gap-5 p-3">
             <Image
               src="/images/service-icon-3.png"
               alt="Picture of the author"
@@ -77,7 +77,7 @@ export default function Home() {
               Barba e cabelo
             </h1>
             <p className="tracking-wide text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              Deixe sua barba e cabelo em dia com um unico pacote.
             </p>
             <span className="text-default text-2xl">R$ 45</span>
           </div>
@@ -104,7 +104,7 @@ export default function Home() {
           <p className="tracking-wider text-sm">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
-          <button className="bg-default hover:bg-golden w-80 tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
+          <button className="bg-default hover:bg-golden w-80 md:w-full sm:w-full tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
             Visite nosso blog
           </button>
         </div>
@@ -119,7 +119,7 @@ export default function Home() {
           </p>
         </header>
         <div className="grid grid-cols-3 gap-10 w-full justify-center items-center sm:grid-cols-1">
-          <div className="w-80 flex flex-col gap-2">
+          <div className="w-80 sm:w-full md:w-full flex flex-col gap-2 p-3">
             <p className="tracking-wide text-lg italic">
               &quot;Eu estava verde de raiva, quando encontrei a barbearia,
               transformaram meu cabelo. Hoje posso ficar verde de cabelo
@@ -128,7 +128,7 @@ export default function Home() {
             <span className="text-primary text-2xl">Bruce Banner</span>
             <span className="text-default text-lg">54 anos</span>
           </div>
-          <div className="w-80 flex flex-col gap-2">
+          <div className="w-80 sm:w-full md:w-full flex flex-col gap-2 p-3">
             <p className="tracking-wide text-lg  italic">
               &quot;Quando estou no Brasil, vou sempre nessa barbearia. Irei
               abrir uma filial em Birmingham em nome dos Peaky Blinders.&quot;
@@ -136,7 +136,7 @@ export default function Home() {
             <span className="text-primary text-2xl">Thomas Shelby</span>
             <span className="text-default text-lg">23 anos</span>
           </div>
-          <div className="w-80 flex flex-col gap-2">
+          <div className="w-80 sm:w-full md:w-full flex flex-col gap-2 p-3">
             <p className="tracking-wide text-lg  italic">
               &quot;Mordor precisa de uma barbearia como essa, nossos Orcs estão
               precisando de um trato de qualidade.&quot;

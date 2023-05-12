@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { CgMenu } from "react-icons/cg";
 import { useState } from "react";
 
 export default function Navegation() {
@@ -15,9 +16,9 @@ export default function Navegation() {
     setNews(!news);
   };
   return (
-    <nav className="flex justify-evenly items-center py-4 border-b h-28 sm:h-16 sm:hidden">
-      <span className=" w-full font-bold text-2xl sm:hidden">Barbershop logo</span>
-      <div className=" w-full flex flex-row tracking-widest font-extralight text-lg uppercase">
+    <nav className="flex justify-evenly  items-center py-4 border-b h-28">
+      <span className=" w-full font-bold text-2xl">Barbershop logo</span>
+      <div className=" w-full flex flex-row tracking-widest font-extralight text-lg uppercase sm:hidden">
         <Link
           className="hover:bg-default sm:px-2 px-10 py-5 hover:text-white transition-all delay-100 ease-in-out "
           href="/"
@@ -115,6 +116,11 @@ export default function Navegation() {
         >
           <span className="text-grey-800">Contact</span>
         </Link>
+      </div>
+      <div className="w-full sm:flex flex-row tracking-widest font-extralight text-lg uppercase justify-end px-5 hidden">
+        <div className="">
+          <CgMenu />
+        </div>
       </div>
     </nav>
   );

@@ -33,8 +33,8 @@ export default function Contact() {
       </div>
       <section className="py-10 flex px-20 sm:px-3 flex-row sm:flex-col-reverse items-start justify-start w-full">
         <div className="w-1/3 sm:w-full flex flex-col py-5">
-          <div className="h-72 bg-base  rounded-t-lg"></div>
-          <div className="h-32 bg-base/30  rounded-b-md"></div>
+          <div className="h-72 bg-basecolor  rounded-t-lg"></div>
+          <div className="h-32 bg-basecolor/30  rounded-b-md"></div>
         </div>
         <div className="flex flex-col justify-center items-start gap-5 py-3 w-full px-10 sm:px-3">
           <form className="flex flex-col justify-center items-start gap-5">

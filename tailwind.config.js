@@ -28,7 +28,7 @@ module.exports = {
         primary: "#18150D",
         default: "#8e7424",
         golden: "#aa9144",
-        base: "#5D5C59",
+        basecolor: "#5D5C59",
         heading: "#282725",
       },
     },
