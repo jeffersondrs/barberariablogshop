@@ -1,6 +1,13 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Posts from "@/components/postblog/Posts";
 
 export default function News() {
+  const pathname = usePathname();
+
   return (
     <main className="flex flex-col items-center justify-between">
       <div className="w-full">
@@ -12,129 +19,62 @@ export default function News() {
           className="object-cover object-center bg-center w-full h-96 filter brightness-50"
         />
         <div className="flex flex-col px-20 gap-5 justify-center items-center absolute top-28 text-lg text-white w-full h-96">
-          <span className="text-4xl uppercase">Novidades</span>
+          <span className="text-4xl uppercase">{pathname.split("/news/")}</span>
           <div className="flex flex-row items-center justify-between gap-1">
             <span className="text-default text-lg uppercase">Home</span>/
-            <span className="text-lg uppercase">Novidades</span>
+            <span className="text-lg uppercase">
+              <Link href={pathname.toString()}>{pathname.split("/news/")}</Link>
+            </span>
           </div>
         </div>
       </div>
-      <section className="py-10 flex px-20 sm:px-3 flex-col  items-center justify-start w-full gap-10">
-        <div className="bg-yellow-900/10 gap-10 flex flex-row py-10 px-20 rounded-xl">
-          <Image
-            src="/images/post-img.jpg"
-            alt="Picture of the author"
-            width={500}
-            height={500}
-            className="rounded-lg"
-          />
-          <div className="flex flex-col gap-5 h-full justify-evenly items-start sm:h-full sm:flex-wrap py-10 px-5">
-            <h1 className="text-2xl tracking-wide font-light uppercase">
-              Estilos novos e tradicionais
-            </h1>
-            <p className="tracking-wider uppercase text-sm">
-              A melhor experiência
-            </p>
-            <p className="tracking-wider text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            </p>
-            <button className="bg-default hover:bg-golden tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
-              Leia mais...
-            </button>
-          </div>
-        </div>
-        <div className="bg-yellow-900/10 gap-10 flex flex-row py-10 px-20 rounded-xl">
-          <Image
-            src="/images/post-img-1.jpg"
-            alt="Picture of the author"
-            width={500}
-            height={500}
-            className="rounded-lg"
-          />
-          <div className="flex flex-col gap-5 h-full justify-evenly items-start sm:h-full sm:flex-wrap py-10 px-5">
-            <h1 className="text-2xl tracking-wide font-light uppercase">
-              Estilos novos e tradicionais
-            </h1>
-            <p className="tracking-wider uppercase text-sm">
-              A melhor experiência
-            </p>
-            <p className="tracking-wider text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            </p>
-            <button className="bg-default hover:bg-golden tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
-              Leia mais...
-            </button>
-          </div>
-        </div>
-        <div className="bg-yellow-900/10 gap-10 flex flex-row py-10 px-20 rounded-xl">
-          <Image
-            src="/images/post-img-2.jpg"
-            alt="Picture of the author"
-            width={500}
-            height={500}
-            className="rounded-lg"
-          />
-          <div className="flex flex-col gap-5 h-full justify-evenly items-start sm:h-full sm:flex-wrap py-10 px-5">
-            <h1 className="text-2xl tracking-wide font-light uppercase">
-              Estilos novos e tradicionais
-            </h1>
-            <p className="tracking-wider uppercase text-sm">
-              A melhor experiência
-            </p>
-            <p className="tracking-wider text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            </p>
-            <button className="bg-default hover:bg-golden tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
-              Leia mais...
-            </button>
-          </div>
-        </div>
-        <div className="bg-yellow-900/10 gap-10 flex flex-row py-10 px-20 rounded-xl">
-          <Image
-            src="/images/post-img-1.jpg"
-            alt="Picture of the author"
-            width={500}
-            height={500}
-            className="rounded-lg"
-          />
-          <div className="flex flex-col gap-5 h-full justify-evenly items-start sm:h-full sm:flex-wrap py-10 px-5">
-            <h1 className="text-2xl tracking-wide font-light uppercase">
-              Estilos novos e tradicionais
-            </h1>
-            <p className="tracking-wider uppercase text-sm">
-              A melhor experiência
-            </p>
-            <p className="tracking-wider text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            </p>
-            <button className="bg-default hover:bg-golden tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
-              Leia mais...
-            </button>
-          </div>
-        </div>
-        <div className="bg-yellow-900/10 gap-10 flex flex-row py-10 px-20 rounded-xl">
-          <Image
-            src="/images/post-img.jpg"
-            alt="Picture of the author"
-            width={500}
-            height={500}
-            className="rounded-lg"
-          />
-          <div className="flex flex-col gap-5 h-full justify-evenly items-start sm:h-full sm:flex-wrap py-10 px-5">
-            <h1 className="text-2xl tracking-wide font-light uppercase">
-              Estilos novos e tradicionais
-            </h1>
-            <p className="tracking-wider uppercase text-sm">
-              A melhor experiência
-            </p>
-            <p className="tracking-wider text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            </p>
-            <button className="bg-default hover:bg-golden tracking-wider font-bold uppercase transition-all delay-75 ease-in-out text-white px-5 py-4 rounded-full">
-              Leia mais...
-            </button>
-          </div>
-        </div>
+      <section className="py-10 sm:py-5 flex px-20 sm:px-3 flex-col items-center justify-start w-full gap-10 sm:gap-5">
+        <Posts
+          image={"/images/post-img-1.jpg"}
+          description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat et
+          deleniti inventore magnam sunt consectetur dignissimos delectus quod rem
+          commodi earum veritatis amet at laborum, ab doloremque sequi nihil
+          blanditiis? Inventore dolor sunt facilis qui tempore nemo similique
+          perferendis aliquid sapiente et, commodi ad dolore rem, ducimus debitis
+          assumenda earum incidunt expedita animi fugiat quidem, nobis totam amet.
+          Ea, tenetur! Aliquam iste nihil, eaque a dolore optio maxime, culpa
+          omnis non voluptatibus ratione aliquid dolor repudiandae. Deleniti,
+          doloribus harum fuga vitae reiciendis, ex et corporis aut fugiat
+          voluptas odit dolore?"
+          subtitle="Loren ipsum"
+          title="Massagem capilar já ouviu falar?"
+        />
+        <Posts
+          image={"/images/post-img-2.jpg"}
+          description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat et
+          deleniti inventore magnam sunt consectetur dignissimos delectus quod rem
+          commodi earum veritatis amet at laborum, ab doloremque sequi nihil
+          blanditiis? Inventore dolor sunt facilis qui tempore nemo similique
+          perferendis aliquid sapiente et, commodi ad dolore rem, ducimus debitis
+          assumenda earum incidunt expedita animi fugiat quidem, nobis totam amet.
+          Ea, tenetur! Aliquam iste nihil, eaque a dolore optio maxime, culpa
+          omnis non voluptatibus ratione aliquid dolor repudiandae. Deleniti,
+          doloribus harum fuga vitae reiciendis, ex et corporis aut fugiat
+          voluptas odit dolore?"
+          subtitle="Loren ipsum"
+          title="Novidades no mercado"
+        />
+        <Posts
+          image={"/images/post-img.jpg"}
+          description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat et 
+          deleniti inventore magnam sunt consectetur dignissimos delectus quod rem
+          commodi earum veritatis amet at laborum, ab doloremque sequi nihil
+          blanditiis? Inventore dolor sunt facilis qui tempore nemo similique
+          perferendis aliquid sapiente et, commodi ad dolore rem, ducimus debitis
+          assumenda earum incidunt expedita animi fugiat quidem, nobis totam amet.
+          Ea, tenetur! Aliquam iste nihil, eaque a dolore optio maxime, culpa
+          omnis non voluptatibus ratione aliquid dolor repudiandae. Deleniti,
+          doloribus harum fuga vitae reiciendis, ex et corporis aut fugiat
+          voluptas odit dolore?"
+          subtitle="Loren ipsum"
+          title="Como cuidar do cabelo em casa?"
+        />
+
         <div className="flex justify-center space-x-1 dark:text-gray-100">
           <button
             title="previous"
