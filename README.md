@@ -11,5 +11,11 @@ Troque as váriáveis ambiente para as suas conforme orientado.
 #### Preview Home Page
 
 <p align="center">
-    <img width="450" src="/public/homepage.png">
+    <img width="650" src="/public/barbershopproject.png">
+</p>
+<p align="center">
+    <img width="650" src="/public/blogbarberproject.png">
+</p>
+<p align="center">
+    <img width="650" src="/public/contactbarberproject.png">
 </p>
